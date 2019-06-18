@@ -13,9 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 
 import kr.or.ddit.boardFile.model.BoardFileVO;
 import kr.or.ddit.boardFile.service.BoardFileService;
@@ -32,7 +29,6 @@ import kr.or.ddit.util.PartUtil;
 @MultipartConfig(maxFileSize = 1024 * 1024 * 3, maxRequestSize = 1024 * 1024 * 15)
 public class WriteBoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private static final Logger logger = LoggerFactory.getLogger(WriteBoardController.class);
     
     private IBoardWriteService boardWriteService;
     private IBoardFileService boardFileService;
