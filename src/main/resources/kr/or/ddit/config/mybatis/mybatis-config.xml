@@ -5,6 +5,7 @@
   
 <configuration>
 
+	<properties resource="kr/or/ddit/config/mybatis/boardDB.properties"></properties>
 	<typeAliases>
 		<typeAlias alias="userVO" type="kr.or.ddit.user.model.UserVO"/>
 		<typeAlias alias="boardVO" type="kr.or.ddit.board.model.BoardVO"/>
@@ -18,10 +19,10 @@
 		<environment id="development">
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
-				<property name="driver" value="oracle.jdbc.driver.OracleDriver" />
-				<property name="url" value="jdbc:oracle:thin:@112.220.114.130:1521:xe" />
-				<property name="username" value="MDMS" />
-				<property name="password" value="java" />
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.username}" />
+				<property name="password" value="${jdbc.password}" />
 			</dataSource>
 		</environment>
 	</environments>
