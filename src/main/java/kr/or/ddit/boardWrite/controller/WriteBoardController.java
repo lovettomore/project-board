@@ -2,11 +2,6 @@ package kr.or.ddit.boardWrite.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Enumeration;
-import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.ServletConfig;
@@ -18,12 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import org.apache.ibatis.javassist.Loader.Simple;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.oreilly.servlet.MultipartRequest;
-import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import kr.or.ddit.boardFile.model.BoardFileVO;
 import kr.or.ddit.boardFile.service.BoardFileService;
