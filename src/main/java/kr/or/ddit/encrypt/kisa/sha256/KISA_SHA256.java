@@ -1,12 +1,5 @@
 package kr.or.ddit.encrypt.kisa.sha256;
 
-/**
-@file KISA_SHA256.java
-@brief SHA256 암호 알고리즘
-@author Copyright (c) 2013 by KISA
-@remarks http://seed.kisa.or.kr/
-*/
-
 public class KISA_SHA256 {
 
 	// DEFAULT : JAVA = BIG_ENDIAN
