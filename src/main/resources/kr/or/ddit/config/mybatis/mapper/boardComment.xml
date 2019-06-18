@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="boardComment">
+
+	<!-- 전체 코멘트 조회 -->
+	<select id="commentList" resultType="boardCommentVO">
+		SELECT * FROM BOARD_COMMENT WHERE WRITEID = #{writeId} ORDER BY WRITEDATE DESC
+	</select>
+	
+	<!-- 코맨트 등록 -->
+	<insert id="insertComment" parameterType="boardCommentVO">
+	INSERT INTO BOARD_COMMENT VALUES(COMMENT_SEQ.NEXTVAL, #{writeId}, #{userId}, #{content}, SYSDATE, 'Y')
+	</insert>
+	
+	<!-- 코멘트 수정 -->
+	<update id="updateComment" parameterType="boardCommentVO">
+		UPDATE BOARD_COMMENT SET
+			CONTENT		= #{content}
+		WHERE WRITEID = #{writeId} AND COMMID = #{commId}
+	</update>
+	
+	<!-- 코멘트 삭제 -->
+	<update id="deleteComment" parameterType="boardCommentVO">
+		UPDATE BOARD_COMMENT SET USE_YN = 'N' WHERE COMMID = #{commId} AND WRITEID = #{writeId}
+	</update>
+</mapper>

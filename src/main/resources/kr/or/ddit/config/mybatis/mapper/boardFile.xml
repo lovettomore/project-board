@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="boardFile">
+
+	<!-- 게시글 파일 조회 -->
+	<select id="boardFileList" resultType="boardFileVO">
+		SELECT /*+ INDEX(BOARD_FILE PK_BOARD_FILE) */* FROM BOARD_FILE WHERE WRITEID = #{writeId}
+	</select>
+	
+	<!-- 파일 조회 -->
+	<select id="getBoardFile" resultType="boardFileVO">
+		SELECT /*+ INDEX(BOARD_FILE PK_BOARD_FILE) */* FROM BOARD_FILE WHERE FILEID = #{fileId}
+	</select>
+	
+	<!-- 파일 저장 -->
+	<insert id="insertFile" parameterType="boardFileVO">
+		INSERT INTO BOARD_FILE VALUES(BOARDFILE_SEQ.NEXTVAL, #{writeId}, #{file_path}, #{original_file_name})
+	</insert>
+	
+	<!-- 파일 삭제 -->
+	<delete id="deleteFile" parameterType="int">
+		DELETE FROM BOARD_FILE WHERE FILEID = #{fileId}
+	</delete>
+	
+</mapper>

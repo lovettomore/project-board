@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+
+/* 초기화 */
+html {overflow-y:scroll}
+body {margin:0;padding:0;font-size:0.75em; font-family: 'NanumSquare', sans-serif; font-weight:400; background:#f3f3f3;}
+html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
+h1, h2, h3, h4, h5, h6 {font-size:1em; font-family: "Noto Sans KR", sans-serif;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+figure {padding:0; margin:0;}
+
+ul, dl,dt,dd {margin:0;padding:0;list-style:none}
+legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
+label, input, button, select, img {vertical-align:middle;font-size:1em}
+input, button {margin:0;padding:0; font-family: "Noto Sans KR", sans-serif; font-size:1em}
+input[type="submit"]{cursor:pointer}
+button {cursor:pointer}
+
+#wrap {width:1920px; height:980px; overflow:hidden; position:relative;}
+#wrap:after {content:''; position:absolute; left:-470px; top:-860px; width:2000px; height:2000px; border-radius:2000px; background:#fff; z-index:1}
+
+.loginWrap {width:320px; height:500px; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); background:#fff; z-index:999}
+
+.inputField {}
+.inputField h2 {font-size:50px; font-weight:700; margin-bottom:30px; color:#292d3e}
+.inputField h2 span {display:inline-block; font-size:15px; font-weight:300; color:#616369; margin-left:8px}
+
+.inputField li {position:relative; margin-bottom:30px}
+.inputField li label {position:absolute; left:30px; top:-6px; background:#fff; color:#999}
+.inputField input {border:1px solid #e1e1e1; width:100%; height:50px; border-radius:100px; padding:0 0 0 30px; box-sizing:border-box; font-size:15px; font-weight:300}
+.inputField input[type="password"] {font-family:"맑은 고딕";}
+.inputField button {background:#292d3e; width:100%; height:50px; border-radius:110px; border:none; color:#fff; font-size:17px;}
